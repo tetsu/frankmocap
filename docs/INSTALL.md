@@ -7,11 +7,11 @@
 
 - The basic installation
   ```
-  conda create -n venv_frankmocap python=3.7
-  conda activate venv_frankmocap
+  conda create -n frankmocap python=3.7
+  conda activate frankmocap
 
   # Install ffmpeg
-  sudo apt-get install ffmpeg
+  sudo apt install ffmpeg
 
   # Install cuda 
   # Choose versions based on your system. For example:
