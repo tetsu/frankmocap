@@ -10,8 +10,8 @@
   conda create -n frankmocap python=3.7
   conda activate frankmocap
 
-  # Install ffmpeg
-  sudo apt install ffmpeg
+  # Install ffmpeg and libosmesa6-dev
+  sudo apt install ffmpeg libosmesa6-dev python-opengl
 
   # Install cuda 
   # Choose versions based on your system. For example:
@@ -22,6 +22,13 @@
 
   # Install other required libraries
   pip install -r docs/requirements.txt
+
+  # Install OpenDr and move back to frankmocap folder
+  cd ..
+  git clone git@github.com:polmorenoc/opendr.git
+  cd opendr
+  python opendr/setup.py install
+  cd ../frankmocap
   ```
 
 - Install [Detectron2](https://github.com/facebookresearch/detectron2) (for hand module)
